@@ -1,0 +1,32 @@
+{
+  "name": "basic-auth",
+  "version": "1.0.0",
+  "description": "basic authorization",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --verbose",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidSuy/basic-auth.git"
+  },
+  "author": "David Suy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidSuy/basic-auth/issues"
+  },
+  "homepage": "https://github.com/DavidSuy/basic-auth#readme",
+  "dependencies": {
+    "base-64": "^1.0.0",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "jest": "^29.0.3",
+    "pg": "^8.8.0",
+    "sequelize": "^6.23.1",
+    "sequelize-cli": "^6.4.1",
+    "sqlite3": "^5.1.1",
+    "supertest": "^6.2.4"
+  }
+}
