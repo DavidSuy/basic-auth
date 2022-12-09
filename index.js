@@ -1,13 +1,15 @@
-'use strict';
+require("dotenv").config();
+const PORT = process.env.PORT;
 
-const server = require('./src/server');
-const { db } = require('./src/auth/models');
-const PORT = process.env.PORT || 3001;
+const sequelize = require("./db");
+const app = require("./src/app");
 
-db.sync()
+// make sure our tables are created, start up the HTTP server.
+sequelize
+  .sync()
   .then(() => {
-    server.start(PORT);
+    app.listen(PORT || 3000, () => console.log("server up"));
   })
-  .catch((err) => {
-    console.log(err);
+  .catch((e) => {
+    console.error("Could not start server", e.message);
   });
